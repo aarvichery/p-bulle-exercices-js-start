@@ -1,0 +1,25 @@
+[
+  {
+    "id": "2beafd61-d3a0-48bf-bddb-d2c8e7c57f2d",
+    "type": "commitpatch",
+    "sha": "e6576fb3fcf188fa6f969904f77275654762f57e",
+    "url": "https://github.com/aarvichery/p-bulle-exercices-js-start/commit/e6576fb3fcf188fa6f969904f77275654762f57e",
+    "name": "feat(Hello-World):Terminer l'exercice",
+    "description": "",
+    "date": "2025-11-07T12:53:00.000Z",
+    "duration": 5,
+    "status": "Done",
+    "author": "aarvichery",
+    "patch": true
+  },
+  {
+    "id": "c9d9b6d3-b916-417b-b984-6047bbbe1072",
+    "type": "commitless",
+    "name": "feat(lasagna):Terminer l'exercice",
+    "description": "",
+    "date": "2025-11-07T14:41:00.000Z",
+    "duration": 10,
+    "status": "Done",
+    "author": "aarvichery"
+  }
+]
