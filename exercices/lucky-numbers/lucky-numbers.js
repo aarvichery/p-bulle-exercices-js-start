@@ -8,7 +8,24 @@
  * @returns {number} sum of the two arrays
  */
 export function twoSum(array1, array2) {
-  throw new Error('Remove this line and implement the function');
+  let chiffre = ''
+  let chiffre2 = ''
+  array1.forEach(element => {
+  String(element)
+  chiffre += element
+  Number(chiffre)
+ });
+
+   array2.forEach(element => {
+  String(element)
+  chiffre2 += element
+  Number(chiffre2)
+ });
+
+ let total = chiffre + chiffre2
+
+ String(total)
+ return total
 }
 
 /**
