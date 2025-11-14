@@ -1,4 +1,3 @@
-/// <reference path="./global.d.ts" />
 // @ts-check
 
 /**
@@ -10,7 +9,14 @@
  * @returns {Visitor} the visitor that was created
  */
 export function createVisitor(name, age, ticketId) {
-  throw new Error('Remove this line and implement the function');
+  let Visitor =
+  {
+    name : name,
+    age : age,
+    ticketid : ticketId
+  } 
+
+  return (Visitor)
 }
 
 /**
