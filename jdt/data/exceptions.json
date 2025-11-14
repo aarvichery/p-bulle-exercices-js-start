@@ -21,5 +21,15 @@
     "duration": 10,
     "status": "Done",
     "author": "aarvichery"
+  },
+  {
+    "id": "a38d3ec1-e20f-4f83-b3ad-1c34414735ea",
+    "type": "commitless",
+    "name": "feat(freelancer-rates):Faire l'exercice",
+    "description": "",
+    "date": "2025-11-07T15:35:00.000Z",
+    "duration": 0,
+    "status": "WIP",
+    "author": "aarvichery"
   }
 ]
