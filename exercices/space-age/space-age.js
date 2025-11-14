@@ -3,6 +3,9 @@
 // convenience to get you started writing code faster.
 //
 
-export const age = () => {
-  throw new Error('Remove this line and implement the function');
+let ageOnEarth
+let ageOnPlanet
+
+export function age(ageOnEarth, ageOnPlanet){
+  return ((ageOnEarth * ageOnPlanet) / 9)
 };
