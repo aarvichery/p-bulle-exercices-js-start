@@ -8,24 +8,25 @@
  * @returns {number} sum of the two arrays
  */
 export function twoSum(array1, array2) {
-  let chiffre = ''
-  let chiffre2 = ''
-  array1.forEach(element => {
-  String(element)
-  chiffre += element
-  Number(chiffre)
- });
+  let text1 = "";
+  let text2 = "";
+  let chiffre1 = 0;
+  let chiffre2 = 0;
 
-   array2.forEach(element => {
-  String(element)
-  chiffre2 += element
-  Number(chiffre2)
- });
+  array1.forEach((element) => {
+    text1 += element.toString();
+  });
 
- let total = chiffre + chiffre2
+  array2.forEach((element) => {
+    text2 += element.toString();
+  });
 
- String(total)
- return total
+  chiffre1 = parseInt(text1);
+  chiffre2 = parseInt(text2);
+
+  let total = chiffre1 + chiffre2;
+
+  return total;
 }
 
 /**
@@ -35,7 +36,11 @@ export function twoSum(array1, array2) {
  * @returns {boolean} whether the number is a palindrome or not
  */
 export function luckyNumber(value) {
-  throw new Error('Remove this line and implement the function');
+  let text1 = "";
+  let chiffre1 = 0;
+
+  text1 = value.toString();
+  return text1 == text1.split("").reverse().join("");
 }
 
 /**
@@ -46,5 +51,5 @@ export function luckyNumber(value) {
  * @returns {string} error message
  */
 export function errorMessage(input) {
-  throw new Error('Remove this line and implement the function');
+  
 }
