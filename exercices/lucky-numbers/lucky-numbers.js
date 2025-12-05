@@ -51,5 +51,17 @@ export function luckyNumber(value) {
  * @returns {string} error message
  */
 export function errorMessage(input) {
-  
+  let error = 0;
+
+  if (input == "" || input == null || input === undefined) {
+    return "Required field";
+  }
+  if (input == "0") {
+    return "Must be a number besides 0";
+  }
+  if (!Number(input)) {
+    return "Must be a number besides 0";
+  } else {
+    return "";
+  }
 }
