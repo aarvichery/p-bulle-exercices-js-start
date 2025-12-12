@@ -4,30 +4,48 @@
 //
 
 export class BankAccount {
-  balance;
+  Balance = null;
 
   constructor() {}
 
   open() {
-    this.balance = 0;
+    if (this.Balance == null) {
+      this.Balance = 0;
+    } else {
+      throw new ValueError();
+    }
   }
 
   close() {
-    if (this.balance != null) {
-      this.balance = null;
+    if (this.Balance != null) {
+      this.Balance = null;
+    } else {
+      throw new ValueError();
     }
   }
 
   deposit(gived) {
-    Balance += gived;
+    if (gived > 0 && this.Balance != null) {
+      this.Balance += gived;
+    } else {
+      throw new ValueError();
+    }
   }
 
-  withdraw(taked) {
-    Balance -= taked;
+  withdraw(took) {
+    if (took >= 0 && this.Balance != null && this.Balance >= took) {
+      this.Balance -= took;
+    } else {
+      throw new ValueError();
+    }
   }
 
   get balance() {
-    return Balance;
+    if (this.Balance != null) {
+      return this.Balance;
+    } else {
+      throw new ValueError();
+    }
   }
 }
 
