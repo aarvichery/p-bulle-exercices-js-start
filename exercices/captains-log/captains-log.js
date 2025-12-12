@@ -6,9 +6,8 @@
  * @returns {string} the generated registry number.
  */
 export function randomShipRegistryNumber() {
-  throw new Error(
-    'Please remove this line and implement the randomShipRegistryNumber() function',
-  );
+  let number = Math.floor(Math.random() * 9999);
+  return "NCC-" + number;
 }
 
 /**
@@ -17,9 +16,8 @@ export function randomShipRegistryNumber() {
  * @returns {number} a stardate between 41000 (inclusive) and 42000 (exclusive).
  */
 export function randomStardate() {
-  throw new Error(
-    'Please remove this line and implement the randomStardate() function',
-  );
+  let number = 41000 + Math.random() * 999;
+  return number;
 }
 
 /**
@@ -28,7 +26,8 @@ export function randomStardate() {
  * @returns {string} a one-letter planet class.
  */
 export function randomPlanetClass() {
-  throw new Error(
-    'Please remove this line and implement the randomStardate() function',
-  );
+  const planet = ["D", "H", "J", "K", "L", "M", "N", "R", "T", "Y"];
+  let number = Math.floor(Math.random() * 10);
+
+  return planet[number];
 }
