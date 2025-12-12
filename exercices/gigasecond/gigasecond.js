@@ -3,6 +3,8 @@
 // convenience to get you started writing code faster.
 //
 
-export const gigasecond = () => {
-  throw new Error('Remove this line and implement the function');
+// Aide sur : https://exercism.org/tracks/javascript/exercises/gigasecond/solutions
+
+export const gigasecond = (date) => {
+  return new Date(date.getTime() + 1e12);
 };
