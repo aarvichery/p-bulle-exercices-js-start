@@ -11,7 +11,16 @@
  * @returns {number} total bird count
  */
 export function totalBirdCount(birdsPerDay) {
-  throw new Error('Remove this line and implement the function');
+  /*let nbbirds = 0;
+  birdsPerDay.forEach((element) => {
+    nbbirds += element;
+  });*/
+
+  let nbbirds = 0;
+  for (let i = 0; i < birdsPerDay.length; i++) {
+    nbbirds += birdsPerDay[i];
+  }
+  return nbbirds;
 }
 
 /**
@@ -22,7 +31,11 @@ export function totalBirdCount(birdsPerDay) {
  * @returns {number} birds counted in the given week
  */
 export function birdsInWeek(birdsPerDay, week) {
-  throw new Error('Remove this line and implement the function');
+  let nbbirds = 0;
+  for (let i = week * 7 - 7; i <= week * 7 - 1; i++) {
+    nbbirds += birdsPerDay[i];
+  }
+  return nbbirds;
 }
 
 /**
@@ -33,5 +46,9 @@ export function birdsInWeek(birdsPerDay, week) {
  * @returns {void} should not return anything
  */
 export function fixBirdCountLog(birdsPerDay) {
-  throw new Error('Remove this line and implement the function');
+  for (let i = 0; i < birdsPerDay.length; i++) {
+    if (i % 2 == 0) {
+      birdsPerDay[i]++;
+    }
+  }
 }
