@@ -21,7 +21,7 @@ export function randomStardate() {
 
 /**
  * Generates a random planet class.
- *
+ *k
  * @returns {string} a one-letter planet class.
  */
 export function randomPlanetClass() {
