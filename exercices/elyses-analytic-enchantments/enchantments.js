@@ -45,7 +45,7 @@ export function doesStackIncludeCard(stack, card) {
 }
 
 /**
- * Determine if each card is evenf
+ * Determine if each card is even
  *
  * @param {number[]} stack
  *
