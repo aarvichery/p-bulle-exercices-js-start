@@ -13,17 +13,13 @@
  * @returns {number} position of the card in the stack
  */
 export function getCardPosition(stack, card) {
-  let idx = 0;
+  let idx = -1;
   for (let i = 0; i < stack.length; i++) {
     if (stack[i] == card) {
-      idx += i;
+      idx += i + 1;
     } else {
       continue;
     }
-  }
-
-  if (idx == 0) {
-    idx--;
   }
   return idx;
 }
@@ -37,7 +33,15 @@ export function getCardPosition(stack, card) {
  * @returns {boolean} true if card is in the stack, false otherwise
  */
 export function doesStackIncludeCard(stack, card) {
-  throw new Error("Implement the doesStackIncludeCard function");
+  let idx = -1;
+  for (let i = 0; i < stack.length; i++) {
+    if (stack[i] == card) {
+      idx += i + 1;
+    } else {
+      continue;
+    }
+  }
+  return !(idx == -1);
 }
 
 /**
@@ -48,7 +52,14 @@ export function doesStackIncludeCard(stack, card) {
  * @returns {boolean} true if all cards are even, false otherwise
  */
 export function isEachCardEven(stack) {
-  throw new Error("Implement the isEachCardEven function");
+  let even = 0;
+  stack.forEach((element) => {
+    if (element % 2 == 0) {
+      even++;
+    }
+  });
+
+  return even == stack.length;
 }
 
 /**
@@ -59,7 +70,14 @@ export function isEachCardEven(stack) {
  * @returns {boolean} true if the array contains odd card, false otherwise
  */
 export function doesStackIncludeOddCard(stack) {
-  throw new Error("Implement the doesStackIncludesOddCard function");
+  let odd = 0;
+  stack.forEach((element) => {
+    if (element % 2 == 0) {
+      odd++;
+    }
+  });
+
+  return !(odd == stack.length);
 }
 
 /**
@@ -70,7 +88,17 @@ export function doesStackIncludeOddCard(stack) {
  * @returns {number | undefined} the first odd value
  */
 export function getFirstOddCard(stack) {
-  throw new Error("Implement the getFirstOddCard function");
+  let odd = 0;
+  let nbr;
+  stack.forEach((element) => {
+    if (!(element % 2 == 0) && odd == 0) {
+      odd++;
+      nbr = 0;
+      nbr += element;
+    }
+  });
+
+  return nbr;
 }
 
 /**
@@ -81,5 +109,14 @@ export function getFirstOddCard(stack) {
  * @returns {number} position of the first card that is even
  */
 export function getFirstEvenCardPosition(stack) {
-  throw new Error("Implement the getFirstEvenCardPosition function");
+  let idx = -1;
+  let even = 0;
+  for (let i = 0; i < stack.length; i++) {
+    if (stack[i] % 2 == 0 && even == 0) {
+      idx += i + 1;
+      even++;
+    }
+  }
+
+  return idx;
 }
