@@ -4,5 +4,22 @@
 //
 
 export const hey = (message) => {
-  throw new Error('Remove this line and implement the function');
+  let Alphabet = /[A-Z]/;
+  let newMessage = message.trim();
+
+  if (newMessage.endsWith("?")) {
+    if (newMessage == newMessage.toUpperCase() && Alphabet.test(newMessage)) {
+      return "Calm down, I know what I'm doing!";
+    } else {
+      return "Sure.";
+    }
+  } else if (
+    newMessage == newMessage.toUpperCase() &&
+    Alphabet.test(newMessage)
+  ) {
+    return "Whoa, chill out!";
+  }
+  if (newMessage === undefined || newMessage === null || newMessage === "") {
+    return "Fine. Be that way!";
+  } else return "Whatever.";
 };
