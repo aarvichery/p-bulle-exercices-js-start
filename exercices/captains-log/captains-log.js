@@ -6,8 +6,7 @@
  * @returns {string} the generated registry number.
  */
 export function randomShipRegistryNumber() {
-  let number = Math.floor(Math.random() * 9999);
-  return "NCC-" + number;
+  return "NCC-" + 1000 + Math.floor(Math.random() * 8999);
 }
 
 /**
