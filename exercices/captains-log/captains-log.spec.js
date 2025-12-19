@@ -1,18 +1,18 @@
-import { describe, expect, test } from '@jest/globals';
+import { describe, expect, test } from "@jest/globals";
 import {
   randomShipRegistryNumber,
   randomStardate,
   randomPlanetClass,
-} from './captains-log';
+} from "./captains-log";
 
-describe('randomShipRegistryNumber', () => {
-  test('registry numbers are valid', () => {
-    for (let i = 0; i < 4; i++) {
-      expect(randomShipRegistryNumber()).toMatch(/NCC-[1-9][0-9]{3}/);
+describe("randomShipRegistryNumber", () => {
+  test("registry numbers are valid", () => {
+    for (let i = 0; i < 40000; i++) {
+      expect(randomShipRegistryNumber()).toMatch(/NCC-[1-9][0-9]{3}$/);
     }
   });
 
-  test('returns a random registry number', () => {
+  test("returns a random registry number", () => {
     expect(randomShipRegistryNumber()).not.toEqual(randomShipRegistryNumber());
   });
 });
@@ -32,8 +32,8 @@ function loadDie(...values) {
   };
 }
 
-describe('randomStardate', () => {
-  test('stardate is between 41000 and 42000', () => {
+describe("randomStardate", () => {
+  test("stardate is between 41000 and 42000", () => {
     const min = 0;
     const max = 1 - Number.EPSILON * 32;
 
@@ -54,17 +54,17 @@ describe('randomStardate', () => {
   });
 });
 
-describe('randomPlanetClass', () => {
-  test('planet classes are valid', () => {
-    const expected = 'DHJKLMNRTY';
+describe("randomPlanetClass", () => {
+  test("planet classes are valid", () => {
+    const expected = "DHJKLMNRTY";
     for (let i = 0; i < 1_000; i++) {
       const actual = randomPlanetClass();
       expect(expected).toContain(actual);
     }
   });
 
-  test('all planet classes can be returned', () => {
-    const expected = 'DHJKLMNRTY';
+  test("all planet classes can be returned", () => {
+    const expected = "DHJKLMNRTY";
     const seen = {};
 
     for (let i = 0; i < 1_000; i++) {
