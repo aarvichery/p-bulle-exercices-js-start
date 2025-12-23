@@ -91,7 +91,7 @@ export function remainingOrders(timeLeft, orders) {
     case "Pure Strawberry Joy":
       final += 0.5;
       break;
-    case "Energizer":
+    case "Energizer": 
       final += 1.5;
       break;
     case "Green Garden":
