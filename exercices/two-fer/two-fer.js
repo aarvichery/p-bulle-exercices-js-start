@@ -3,6 +3,19 @@
 // convenience to get you started writing code faster.
 //
 
-export const twoFer = () => {
-  throw new Error('Remove this line and implement the function');
+/**
+ * Determine the price of the pizza given the pizza and optional extras
+ *
+ * @param {String} name name of the pizza to be made
+ * @returns {string} the price of the pizza
+ */
+export const twoFer = (name) => {
+  if (name !== undefined)
+  {
+    return "One for " + name + ", one for me."
+  }
+  else
+  {
+    return "One for you, one for me."
+  }
 };
