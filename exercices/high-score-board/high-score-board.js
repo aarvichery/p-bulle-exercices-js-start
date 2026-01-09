@@ -7,7 +7,12 @@
  * @returns {Record<string, number>} new score board
  */
 export function createScoreBoard() {
-  throw new Error('Remove this line and implement the function');
+  const obj = {
+    name: "The Best Ever",
+    score: 1000000,
+  };
+
+  return { [obj.name]: obj.score };
 }
 
 /**
@@ -19,7 +24,14 @@ export function createScoreBoard() {
  * @returns {Record<string, number>} updated score board
  */
 export function addPlayer(scoreBoard, player, score) {
-  throw new Error('Remove this line and implement the function');
+  const obj = {
+    name: player,
+    score: score,
+  };
+
+  Object.assign(scoreBoard, { [obj.name]: obj.score });
+
+  return scoreBoard;
 }
 
 /**
@@ -30,7 +42,8 @@ export function addPlayer(scoreBoard, player, score) {
  * @returns {Record<string, number>} updated score board
  */
 export function removePlayer(scoreBoard, player) {
-  throw new Error('Remove this line and implement the function');
+  delete scoreBoard[player];
+  return scoreBoard;
 }
 
 /**
@@ -42,7 +55,8 @@ export function removePlayer(scoreBoard, player) {
  * @returns {Record<string, number>} updated score board
  */
 export function updateScore(scoreBoard, player, points) {
-  throw new Error('Remove this line and implement the function');
+  scoreBoard[player] += points;
+  return scoreBoard;
 }
 
 /**
@@ -52,5 +66,8 @@ export function updateScore(scoreBoard, player, points) {
  * @returns {Record<string, number>} updated score board
  */
 export function applyMondayBonus(scoreBoard) {
-  throw new Error('Remove this line and implement the function');
+  for (let key in scoreBoard) {
+    scoreBoard[key] += 100;
+  }
+  return scoreBoard;
 }
