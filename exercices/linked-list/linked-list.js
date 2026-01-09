@@ -4,8 +4,13 @@
 //
 
 export class LinkedList {
-  push() {
-    throw new Error('Remove this line and implement the function');
+
+  /**
+   * @param {Number} station
+   */
+  push(station) {
+    let list = [];
+    list.push(station);
   }
 
   pop() {
