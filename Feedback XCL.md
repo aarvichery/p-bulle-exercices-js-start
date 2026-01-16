@@ -7,3 +7,7 @@
 - (durabilité) .gitignore: OK
 
 - Globalement: ça se passe relativement bien. Veillez a bien préparer le deuxième test pour assurer le coup.
+
+## Final
+
+- Voir grille
